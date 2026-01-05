@@ -3,7 +3,7 @@ import { useAuth } from '../hooks/useAuth';
 import { Eye, EyeOff, Mail, Lock, ArrowRight } from 'lucide-react';
 
 const LoginPage = () => {
-  const [email, setEmail] = useState('demo@testuser.com');
+  const [email, setEmail] = useState('demo@user.com');
   const [password, setPassword] = useState('Demo@123');
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -118,7 +118,7 @@ const LoginPage = () => {
           {/* Demo Credentials */}
           <div className="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-100">
             <p className="text-xs text-blue-600 font-medium mb-1">Demo Credentials:</p>
-            <p className="text-xs text-blue-500">demo@testuser.com / Demo@123</p>
+            <p className="text-xs text-blue-500">demo@user.com / Demo@123</p>
           </div>
         </div>
       </div>
