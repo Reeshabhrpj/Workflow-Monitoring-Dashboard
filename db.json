@@ -1,0 +1,373 @@
+{
+  "workflows": [
+    {
+      "id": "wf-001",
+      "name": "User Data Pipeline",
+      "status": "success",
+      "lastRun": "2024-01-15T14:30:00Z",
+      "duration": 245,
+      "priority": "high",
+      "owner": "Sarah Chen",
+      "environment": "production",
+      "tags": ["data", "etl", "users"],
+      "logs": [
+        "2024-01-15T14:30:00Z [INFO] Starting user data pipeline",
+        "2024-01-15T14:30:15Z [INFO] Connecting to database cluster (prod-db-01)",
+        "2024-01-15T14:30:30Z [INFO] Processing 1,250 user records from last 24h",
+        "2024-01-15T14:33:45Z [INFO] Data validation completed - 0 errors, 12 warnings",
+        "2024-01-15T14:34:05Z [SUCCESS] Pipeline completed successfully - 1,250 records processed"
+      ]
+    },
+    {
+      "id": "wf-002",
+      "name": "Email Campaign Processor",
+      "status": "failed",
+      "lastRun": "2024-01-15T13:45:00Z",
+      "duration": 120,
+      "priority": "medium",
+      "owner": "Mike Rodriguez",
+      "environment": "production",
+      "tags": ["email", "marketing", "campaigns"],
+      "logs": [
+        "2024-01-15T13:45:00Z [INFO] Starting email campaign processor",
+        "2024-01-15T13:45:10Z [INFO] Loading campaign templates from S3",
+        "2024-01-15T13:46:30Z [WARNING] High memory usage detected (85%) - heap size: 3.2GB",
+        "2024-01-15T13:47:00Z [ERROR] SMTP connection timeout after 30s - server: smtp.company.com:587",
+        "2024-01-15T13:47:00Z [FAILED] Pipeline failed with errors - 0/5000 emails sent"
+      ]
+    },
+    {
+      "id": "wf-003",
+      "name": "Inventory Sync",
+      "status": "pending",
+      "lastRun": "2024-01-15T15:00:00Z",
+      "duration": 0,
+      "priority": "low",
+      "owner": "Lisa Wang",
+      "environment": "production",
+      "tags": ["inventory", "sync", "retail"],
+      "logs": [
+        "2024-01-15T15:00:00Z [INFO] Queued for execution - position 3 in queue",
+        "2024-01-15T15:00:05Z [INFO] Waiting for available resources - estimated start: 15:05"
+      ]
+    },
+    {
+      "id": "wf-004",
+      "name": "Financial Report Generation",
+      "status": "success",
+      "lastRun": "2024-01-15T12:00:00Z",
+      "duration": 180,
+      "priority": "high",
+      "owner": "David Kim",
+      "environment": "production",
+      "tags": ["finance", "reports", "analytics"],
+      "logs": [
+        "2024-01-15T12:00:00Z [INFO] Starting financial report generation",
+        "2024-01-15T12:00:30Z [INFO] Collecting data from 5 sources: Stripe, PayPal, Bank API, Internal DB, Salesforce",
+        "2024-01-15T12:02:15Z [INFO] Generating charts and graphs - revenue: $2.4M, expenses: $1.8M",
+        "2024-01-15T12:03:00Z [SUCCESS] Report generated successfully - saved to reports/finance/2024-01-15.pdf"
+      ]
+    },
+    {
+      "id": "wf-005",
+      "name": "Database Backup",
+      "status": "success",
+      "lastRun": "2024-01-15T02:00:00Z",
+      "duration": 1800,
+      "priority": "critical",
+      "owner": "Alex Johnson",
+      "environment": "production",
+      "tags": ["backup", "database", "maintenance"],
+      "logs": [
+        "2024-01-15T02:00:00Z [INFO] Starting database backup - target: prod-db-cluster",
+        "2024-01-15T02:05:00Z [INFO] Creating snapshot of 15GB database (users: 8.2GB, orders: 4.1GB, logs: 2.7GB)",
+        "2024-01-15T02:25:00Z [INFO] Compressing backup files - compression ratio: 68%",
+        "2024-01-15T02:30:00Z [SUCCESS] Backup completed successfully - final size: 4.8GB, stored in S3"
+      ]
+    },
+    {
+      "id": "wf-006",
+      "name": "API Health Check",
+      "status": "failed",
+      "lastRun": "2024-01-15T14:15:00Z",
+      "duration": 30,
+      "priority": "high",
+      "owner": "Emma Thompson",
+      "environment": "production",
+      "tags": ["monitoring", "api", "health"],
+      "logs": [
+        "2024-01-15T14:15:00Z [INFO] Starting API health check - checking 12 endpoints",
+        "2024-01-15T14:15:10Z [WARNING] Slow response from payment service (2.5s) - threshold: 1s",
+        "2024-01-15T14:15:30Z [ERROR] Authentication service unreachable - timeout after 15s",
+        "2024-01-15T14:15:30Z [FAILED] Health check failed - 2/12 services down"
+      ]
+    },
+    {
+      "id": "wf-007",
+      "name": "Log Aggregation",
+      "status": "running",
+      "lastRun": "2024-01-15T15:10:00Z",
+      "duration": 300,
+      "priority": "medium",
+      "owner": "James Wilson",
+      "environment": "production",
+      "tags": ["logs", "aggregation", "monitoring"],
+      "logs": [
+        "2024-01-15T15:10:00Z [INFO] Starting log aggregation from 25 services",
+        "2024-01-15T15:12:00Z [INFO] Processing logs from last hour - 2.3M entries",
+        "2024-01-15T15:14:30Z [INFO] Indexing logs in Elasticsearch - progress: 65%"
+      ]
+    },
+    {
+      "id": "wf-008",
+      "name": "Security Vulnerability Scan",
+      "status": "success",
+      "lastRun": "2024-01-15T11:30:00Z",
+      "duration": 420,
+      "priority": "critical",
+      "owner": "Rachel Green",
+      "environment": "production",
+      "tags": ["security", "scan", "vulnerabilities"],
+      "logs": [
+        "2024-01-15T11:30:00Z [INFO] Starting security vulnerability scan",
+        "2024-01-15T11:32:00Z [INFO] Scanning 15 services for known vulnerabilities (CVE database)",
+        "2024-01-15T11:35:30Z [INFO] Vulnerability assessment complete - 0 critical, 2 medium, 5 low",
+        "2024-01-15T11:37:00Z [SUCCESS] Security scan completed - report generated"
+      ]
+    },
+    {
+      "id": "wf-009",
+      "name": "ML Model Training",
+      "status": "running",
+      "lastRun": "2024-01-15T16:00:00Z",
+      "duration": 3600,
+      "priority": "high",
+      "owner": "Dr. Amanda Foster",
+      "environment": "staging",
+      "tags": ["ml", "training", "ai"],
+      "logs": [
+        "2024-01-15T16:00:00Z [INFO] Starting ML model training - recommendation engine v2.1",
+        "2024-01-15T16:05:00Z [INFO] Loading training dataset (50GB) - 2.5M user interactions",
+        "2024-01-15T16:15:00Z [INFO] Training in progress - Epoch 1/10, loss: 0.245",
+        "2024-01-15T16:45:00Z [INFO] Training in progress - Epoch 5/10, loss: 0.089, accuracy: 94.2%"
+      ]
+    },
+    {
+      "id": "wf-010",
+      "name": "Data Warehouse ETL",
+      "status": "success",
+      "lastRun": "2024-01-15T10:00:00Z",
+      "duration": 2400,
+      "priority": "high",
+      "owner": "Carlos Martinez",
+      "environment": "production",
+      "tags": ["etl", "warehouse", "analytics"],
+      "logs": [
+        "2024-01-15T10:00:00Z [INFO] Starting ETL process - daily data warehouse update",
+        "2024-01-15T10:10:00Z [INFO] Extracting data from 12 sources (CRM, ERP, Web Analytics, etc.)",
+        "2024-01-15T10:25:00Z [INFO] Transforming 2.5M records - applying business rules",
+        "2024-01-15T10:40:00Z [SUCCESS] ETL completed successfully - warehouse updated with 2.5M records"
+      ]
+    },
+    {
+      "id": "wf-011",
+      "name": "Customer Analytics Pipeline",
+      "status": "failed",
+      "lastRun": "2024-01-15T09:30:00Z",
+      "duration": 90,
+      "priority": "medium",
+      "owner": "Nina Patel",
+      "environment": "production",
+      "tags": ["analytics", "customers", "segmentation"],
+      "logs": [
+        "2024-01-15T09:30:00Z [INFO] Starting customer analytics pipeline",
+        "2024-01-15T09:31:00Z [ERROR] Missing required data field: customer_segment in table users",
+        "2024-01-15T09:31:30Z [FAILED] Analytics pipeline failed - data schema mismatch"
+      ]
+    },
+    {
+      "id": "wf-012",
+      "name": "Infrastructure Monitoring",
+      "status": "success",
+      "lastRun": "2024-01-15T14:45:00Z",
+      "duration": 60,
+      "priority": "critical",
+      "owner": "Tom Anderson",
+      "environment": "production",
+      "tags": ["monitoring", "infrastructure", "alerts"],
+      "logs": [
+        "2024-01-15T14:45:00Z [INFO] Starting infrastructure monitoring sweep",
+        "2024-01-15T14:45:30Z [INFO] Checking 25 servers, 8 databases, 12 services",
+        "2024-01-15T14:46:00Z [SUCCESS] All systems operational - CPU avg: 45%, Memory avg: 62%"
+      ]
+    },
+    {
+      "id": "wf-013",
+      "name": "Image Processing Pipeline",
+      "status": "success",
+      "lastRun": "2024-01-15T13:20:00Z",
+      "duration": 890,
+      "priority": "medium",
+      "owner": "Sophie Turner",
+      "environment": "production",
+      "tags": ["images", "processing", "cdn"],
+      "logs": [
+        "2024-01-15T13:20:00Z [INFO] Starting image processing pipeline",
+        "2024-01-15T13:22:00Z [INFO] Processing 1,450 uploaded images",
+        "2024-01-15T13:28:00Z [INFO] Generating thumbnails and optimizing for web",
+        "2024-01-15T13:35:00Z [SUCCESS] All images processed and uploaded to CDN"
+      ]
+    },
+    {
+      "id": "wf-014",
+      "name": "Payment Processing Reconciliation",
+      "status": "pending",
+      "lastRun": "2024-01-15T15:30:00Z",
+      "duration": 0,
+      "priority": "high",
+      "owner": "Michael Chang",
+      "environment": "production",
+      "tags": ["payments", "reconciliation", "finance"],
+      "logs": [
+        "2024-01-15T15:30:00Z [INFO] Queued for execution - waiting for payment gateway data"
+      ]
+    },
+    {
+      "id": "wf-015",
+      "name": "Social Media Analytics",
+      "status": "success",
+      "lastRun": "2024-01-15T11:00:00Z",
+      "duration": 320,
+      "priority": "low",
+      "owner": "Jessica Park",
+      "environment": "production",
+      "tags": ["social", "analytics", "marketing"],
+      "logs": [
+        "2024-01-15T11:00:00Z [INFO] Starting social media analytics collection",
+        "2024-01-15T11:02:00Z [INFO] Fetching data from Twitter, Facebook, Instagram APIs",
+        "2024-01-15T11:05:20Z [SUCCESS] Analytics data collected - 15K mentions, sentiment: 78% positive"
+      ]
+    },
+    {
+      "id": "wf-016",
+      "name": "Fraud Detection Model",
+      "status": "running",
+      "lastRun": "2024-01-15T14:00:00Z",
+      "duration": 1200,
+      "priority": "critical",
+      "owner": "Robert Kim",
+      "environment": "production",
+      "tags": ["fraud", "detection", "security"],
+      "logs": [
+        "2024-01-15T14:00:00Z [INFO] Starting fraud detection analysis",
+        "2024-01-15T14:05:00Z [INFO] Analyzing 50K transactions from last 6 hours",
+        "2024-01-15T14:15:00Z [INFO] ML model processing - 12 suspicious patterns detected"
+      ]
+    },
+    {
+      "id": "wf-017",
+      "name": "Content Delivery Optimization",
+      "status": "success",
+      "lastRun": "2024-01-15T08:30:00Z",
+      "duration": 450,
+      "priority": "medium",
+      "owner": "Anna Rodriguez",
+      "environment": "production",
+      "tags": ["cdn", "optimization", "performance"],
+      "logs": [
+        "2024-01-15T08:30:00Z [INFO] Starting CDN optimization process",
+        "2024-01-15T08:32:00Z [INFO] Analyzing traffic patterns from 15 edge locations",
+        "2024-01-15T08:37:30Z [SUCCESS] CDN optimization complete - 23% improvement in load times"
+      ]
+    },
+    {
+      "id": "wf-018",
+      "name": "Automated Testing Suite",
+      "status": "failed",
+      "lastRun": "2024-01-15T16:30:00Z",
+      "duration": 180,
+      "priority": "high",
+      "owner": "Kevin Liu",
+      "environment": "staging",
+      "tags": ["testing", "automation", "qa"],
+      "logs": [
+        "2024-01-15T16:30:00Z [INFO] Starting automated test suite - 1,250 test cases",
+        "2024-01-15T16:31:00Z [INFO] Running unit tests - 890/890 passed",
+        "2024-01-15T16:32:30Z [ERROR] Integration test failed: API timeout in checkout flow",
+        "2024-01-15T16:33:00Z [FAILED] Test suite failed - 1 critical failure in checkout"
+      ]
+    },
+    {
+      "id": "wf-019",
+      "name": "Inventory Forecasting",
+      "status": "success",
+      "lastRun": "2024-01-15T07:00:00Z",
+      "duration": 680,
+      "priority": "medium",
+      "owner": "Maria Santos",
+      "environment": "production",
+      "tags": ["inventory", "forecasting", "ml"],
+      "logs": [
+        "2024-01-15T07:00:00Z [INFO] Starting inventory forecasting model",
+        "2024-01-15T07:05:00Z [INFO] Analyzing sales data from last 12 months",
+        "2024-01-15T07:11:20Z [SUCCESS] Forecasting complete - predicted 15% increase in Q2 demand"
+      ]
+    },
+    {
+      "id": "wf-020",
+      "name": "Customer Support Ticket Analysis",
+      "status": "success",
+      "lastRun": "2024-01-15T12:30:00Z",
+      "duration": 240,
+      "priority": "low",
+      "owner": "Daniel Brown",
+      "environment": "production",
+      "tags": ["support", "analysis", "nlp"],
+      "logs": [
+        "2024-01-15T12:30:00Z [INFO] Starting support ticket analysis",
+        "2024-01-15T12:32:00Z [INFO] Processing 2,340 tickets from last week",
+        "2024-01-15T12:34:00Z [SUCCESS] Analysis complete - top issues: login (23%), billing (18%), bugs (15%)"
+      ]
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-001",
+      "type": "error",
+      "title": "Workflow Failed",
+      "message": "Email Campaign Processor failed due to SMTP timeout",
+      "timestamp": "2024-01-15T13:47:00Z",
+      "read": false,
+      "workflowId": "wf-002"
+    },
+    {
+      "id": "notif-002",
+      "type": "warning",
+      "title": "High Resource Usage",
+      "message": "ML Model Training using 85% of available GPU resources",
+      "timestamp": "2024-01-15T16:45:00Z",
+      "read": false,
+      "workflowId": "wf-009"
+    },
+    {
+      "id": "notif-003",
+      "type": "success",
+      "title": "Backup Completed",
+      "message": "Database backup completed successfully (4.8GB)",
+      "timestamp": "2024-01-15T02:30:00Z",
+      "read": true,
+      "workflowId": "wf-005"
+    }
+  ],
+  "metrics": {
+    "totalWorkflows": 20,
+    "activeWorkflows": 3,
+    "successRate": 75,
+    "avgDuration": 485,
+    "resourceUsage": {
+      "cpu": 45,
+      "memory": 62,
+      "storage": 78
+    }
+  }
+}
